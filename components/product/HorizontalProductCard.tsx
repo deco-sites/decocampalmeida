@@ -92,8 +92,8 @@ function HorizontalProductCard({
             variant={relativeLink === relativeUrl
               ? "active"
               : relativeLink
-                ? "default"
-                : "disabled"}
+              ? "default"
+              : "disabled"}
             content={value}
           />
         </a>
@@ -113,11 +113,13 @@ function HorizontalProductCard({
   return (
     <div
       id={id}
-      class={`card lg:card-side bg-base-100 shadow-xl justify-between w-[50%] gap-14 ${align === "center" ? "text-center" : "text-start"
-        } ${l?.onMouseOver?.showCardShadow ? "lg:hover:card-bordered" : ""}
-        ${l?.onMouseOver?.card === "Move up" &&
+      class={`card lg:card-side bg-base-100 shadow-xl justify-between w-[50%] gap-14 ${
+        align === "center" ? "text-center" : "text-start"
+      } ${l?.onMouseOver?.showCardShadow ? "lg:hover:card-bordered" : ""}
+        ${
+        l?.onMouseOver?.card === "Move up" &&
         "duration-500 transition-translate ease-in-out lg:hover:-translate-y-2"
-        }
+      }
       `}
       data-deco="view-product"
     >
@@ -143,8 +145,9 @@ function HorizontalProductCard({
         class={`absolute top-2 z-10 flex items-center left-2`}
       >
         <div
-          class={`${l?.hide?.favoriteIcon ? "hidden" : "block"} ${l?.onMouseOver?.showFavoriteIcon ? "lg:group-hover:block" : ""
-            }`}
+          class={`${l?.hide?.favoriteIcon ? "hidden" : "block"} ${
+            l?.onMouseOver?.showFavoriteIcon ? "lg:group-hover:block" : ""
+          }`}
         >
           {platform === "vtex" && (
             <WishlistButtonVtex
@@ -183,10 +186,11 @@ function HorizontalProductCard({
           alt={front.alternateName}
           width={WIDTH}
           height={HEIGHT}
-          class={`bg-base-100 col-span-full row-span-full rounded w-full ${l?.onMouseOver?.image == "Zoom image"
-            ? "duration-100 transition-scale scale-100 lg:group-hover:scale-125"
-            : ""
-            }`}
+          class={`bg-base-100 col-span-full row-span-full rounded w-full ${
+            l?.onMouseOver?.image == "Zoom image"
+              ? "duration-100 transition-scale scale-100 lg:group-hover:scale-125"
+              : ""
+          }`}
           sizes="(max-width: 640px) 50vw, 20vw"
           preload={true}
           loading="eager"
@@ -194,38 +198,39 @@ function HorizontalProductCard({
         />
         {(!l?.onMouseOver?.image ||
           l?.onMouseOver?.image == "Change image") && (
-            <Image
-              src={back?.url ?? front.url!}
-              alt={back?.alternateName ?? front.alternateName}
-              width={WIDTH}
-              height={HEIGHT}
-              class="bg-base-100 col-span-full row-span-full transition-opacity rounded w-full opacity-0 lg:group-hover:opacity-100"
-              sizes="(max-width: 640px) 50vw, 20vw"
-              loading="lazy"
-              decoding="async"
-            />
-          )}
+          <Image
+            src={back?.url ?? front.url!}
+            alt={back?.alternateName ?? front.alternateName}
+            width={WIDTH}
+            height={HEIGHT}
+            class="bg-base-100 col-span-full row-span-full transition-opacity rounded w-full opacity-0 lg:group-hover:opacity-100"
+            sizes="(max-width: 640px) 50vw, 20vw"
+            loading="lazy"
+            decoding="async"
+          />
+        )}
       </a>
       {/* Prices & Name */}
       <div class="flex-auto flex flex-row p-2 gap-3 lg:gap-2 max-w-sm">
         {/* SKU Selector */}
         {(!l?.elementsPositions?.skuSelector ||
           l?.elementsPositions?.skuSelector === "Top") && (
-            <>
-              {l?.hide?.skuSelector
-                ? (
-                  ""
-                )
-                : (
-                  <ul
-                    class={`flex items-center gap-2 w-full overflow-auto p-3 ${align === "center" ? "justify-center" : "justify-start"
-                      } ${l?.onMouseOver?.showSkuSelector ? "lg:hidden" : ""}`}
-                  >
-                    {skuSelector}
-                  </ul>
-                )}
-            </>
-          )}
+          <>
+            {l?.hide?.skuSelector
+              ? (
+                ""
+              )
+              : (
+                <ul
+                  class={`flex items-center gap-2 w-full overflow-auto p-3 ${
+                    align === "center" ? "justify-center" : "justify-start"
+                  } ${l?.onMouseOver?.showSkuSelector ? "lg:hidden" : ""}`}
+                >
+                  {skuSelector}
+                </ul>
+              )}
+          </>
+        )}
 
         {l?.hide?.productName && l?.hide?.productDescription
           ? (
@@ -265,14 +270,16 @@ function HorizontalProductCard({
             : (
               <div class="flex flex-col gap-2">
                 <div
-                  class={`flex flex-col gap-0 ${l?.basics?.oldPriceSize === "Normal"
-                    ? "lg:flex-row-reverse lg:gap-2"
-                    : ""
-                    } ${align === "center" ? "justify-center" : "justify-end"}`}
+                  class={`flex flex-col gap-0 ${
+                    l?.basics?.oldPriceSize === "Normal"
+                      ? "lg:flex-row-reverse lg:gap-2"
+                      : ""
+                  } ${align === "center" ? "justify-center" : "justify-end"}`}
                 >
                   <div
-                    class={`line-through text-base-300 text-xs font-light ${l?.basics?.oldPriceSize === "Normal" ? "lg:text-sm" : ""
-                      }`}
+                    class={`line-through text-base-300 text-xs font-light ${
+                      l?.basics?.oldPriceSize === "Normal" ? "lg:text-sm" : ""
+                    }`}
                   >
                     {formatPrice(listPrice, offers?.priceCurrency)}
                   </div>
@@ -285,8 +292,9 @@ function HorizontalProductCard({
           {l?.elementsPositions?.skuSelector === "Bottom" && (
             <>
               <ul
-                class={`flex flex-col items-start gap-2 w-full ${align === "center" ? "justify-center" : "justify-between"
-                  } ${l?.onMouseOver?.showSkuSelector ? "lg:hidden" : ""}`}
+                class={`flex flex-col items-start gap-2 w-full ${
+                  align === "center" ? "justify-center" : "justify-between"
+                } ${l?.onMouseOver?.showSkuSelector ? "lg:hidden" : ""}`}
               >
                 {l?.hide?.installments
                   ? (
