@@ -31,20 +31,20 @@ import * as $$$$$$19 from "./sections/Content/Table.tsx";
 import * as $$$$$$20 from "./sections/Content/Testimonials.tsx";
 import * as $$$$$$21 from "./sections/Content/TextWithImage.tsx";
 import * as $$$$$$22 from "./sections/CouponSection.tsx";
-import * as $$$$$$23 from "./sections/Footer/Footer.tsx";
-import * as $$$$$$24 from "./sections/Gallery.tsx";
-import * as $$$$$$25 from "./sections/Header/Header.tsx";
-import * as $$$$$$26 from "./sections/Images/BannerGrid.tsx";
-import * as $$$$$$27 from "./sections/Images/Carousel.tsx";
-import * as $$$$$$28 from "./sections/Images/ImageGallery.tsx";
-import * as $$$$$$29 from "./sections/Images/ShoppableBanner.tsx";
-import * as $$$$$$30 from "./sections/Links/LinkTree.tsx";
-import * as $$$$$$31 from "./sections/Links/Shortcuts.tsx";
-import * as $$$$$$32 from "./sections/Miscellaneous/CampaignTimer.tsx";
-import * as $$$$$$33 from "./sections/Miscellaneous/CookieConsent.tsx";
-import * as $$$$$$34 from "./sections/Miscellaneous/Slide.tsx";
-import * as $$$$$$35 from "./sections/Newsletter/Newsletter.tsx";
-import * as $$$$$$36 from "./sections/PartialImageGallery.tsx";
+import * as $$$$$$23 from "./sections/ExpandImageGallery.tsx";
+import * as $$$$$$24 from "./sections/Footer/Footer.tsx";
+import * as $$$$$$25 from "./sections/Gallery.tsx";
+import * as $$$$$$26 from "./sections/Header/Header.tsx";
+import * as $$$$$$27 from "./sections/Images/BannerGrid.tsx";
+import * as $$$$$$28 from "./sections/Images/Carousel.tsx";
+import * as $$$$$$29 from "./sections/Images/ImageGallery.tsx";
+import * as $$$$$$30 from "./sections/Images/ShoppableBanner.tsx";
+import * as $$$$$$31 from "./sections/Links/LinkTree.tsx";
+import * as $$$$$$32 from "./sections/Links/Shortcuts.tsx";
+import * as $$$$$$33 from "./sections/Miscellaneous/CampaignTimer.tsx";
+import * as $$$$$$34 from "./sections/Miscellaneous/CookieConsent.tsx";
+import * as $$$$$$35 from "./sections/Miscellaneous/Slide.tsx";
+import * as $$$$$$36 from "./sections/Newsletter/Newsletter.tsx";
 import * as $$$$$$37 from "./sections/Product/ImageGalleryFrontBack.tsx";
 import * as $$$$$$38 from "./sections/Product/NotFound.tsx";
 import * as $$$$$$39 from "./sections/Product/NotFoundChallenge.tsx";
@@ -92,22 +92,22 @@ const manifest = {
     "deco-sites/decocampalmeida/sections/Content/Testimonials.tsx": $$$$$$20,
     "deco-sites/decocampalmeida/sections/Content/TextWithImage.tsx": $$$$$$21,
     "deco-sites/decocampalmeida/sections/CouponSection.tsx": $$$$$$22,
-    "deco-sites/decocampalmeida/sections/Footer/Footer.tsx": $$$$$$23,
-    "deco-sites/decocampalmeida/sections/Gallery.tsx": $$$$$$24,
-    "deco-sites/decocampalmeida/sections/Header/Header.tsx": $$$$$$25,
-    "deco-sites/decocampalmeida/sections/Images/BannerGrid.tsx": $$$$$$26,
-    "deco-sites/decocampalmeida/sections/Images/Carousel.tsx": $$$$$$27,
-    "deco-sites/decocampalmeida/sections/Images/ImageGallery.tsx": $$$$$$28,
-    "deco-sites/decocampalmeida/sections/Images/ShoppableBanner.tsx": $$$$$$29,
-    "deco-sites/decocampalmeida/sections/Links/LinkTree.tsx": $$$$$$30,
-    "deco-sites/decocampalmeida/sections/Links/Shortcuts.tsx": $$$$$$31,
+    "deco-sites/decocampalmeida/sections/ExpandImageGallery.tsx": $$$$$$23,
+    "deco-sites/decocampalmeida/sections/Footer/Footer.tsx": $$$$$$24,
+    "deco-sites/decocampalmeida/sections/Gallery.tsx": $$$$$$25,
+    "deco-sites/decocampalmeida/sections/Header/Header.tsx": $$$$$$26,
+    "deco-sites/decocampalmeida/sections/Images/BannerGrid.tsx": $$$$$$27,
+    "deco-sites/decocampalmeida/sections/Images/Carousel.tsx": $$$$$$28,
+    "deco-sites/decocampalmeida/sections/Images/ImageGallery.tsx": $$$$$$29,
+    "deco-sites/decocampalmeida/sections/Images/ShoppableBanner.tsx": $$$$$$30,
+    "deco-sites/decocampalmeida/sections/Links/LinkTree.tsx": $$$$$$31,
+    "deco-sites/decocampalmeida/sections/Links/Shortcuts.tsx": $$$$$$32,
     "deco-sites/decocampalmeida/sections/Miscellaneous/CampaignTimer.tsx":
-      $$$$$$32,
-    "deco-sites/decocampalmeida/sections/Miscellaneous/CookieConsent.tsx":
       $$$$$$33,
-    "deco-sites/decocampalmeida/sections/Miscellaneous/Slide.tsx": $$$$$$34,
-    "deco-sites/decocampalmeida/sections/Newsletter/Newsletter.tsx": $$$$$$35,
-    "deco-sites/decocampalmeida/sections/PartialImageGallery.tsx": $$$$$$36,
+    "deco-sites/decocampalmeida/sections/Miscellaneous/CookieConsent.tsx":
+      $$$$$$34,
+    "deco-sites/decocampalmeida/sections/Miscellaneous/Slide.tsx": $$$$$$35,
+    "deco-sites/decocampalmeida/sections/Newsletter/Newsletter.tsx": $$$$$$36,
     "deco-sites/decocampalmeida/sections/Product/ImageGalleryFrontBack.tsx":
       $$$$$$37,
     "deco-sites/decocampalmeida/sections/Product/NotFound.tsx": $$$$$$38,

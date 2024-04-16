@@ -25,6 +25,7 @@ function PartialImageGallery({
     callActionImagesIndex.value = callActionImagesIndex.value + 1;
   };
 
+<<<<<<< HEAD:components/ui/PartialImageGallery.tsx
   return (
     <div class="w-full container py-8 flex flex-col gap-6 lg:py-10">
       <div class="div-container flex flex-col gap-5 max-w-[800px]">
@@ -62,6 +63,40 @@ function PartialImageGallery({
       </button>
     </div>
   );
+=======
+    return (
+        <div class="w-full container py-8 flex flex-col gap-6 lg:py-10 items-center">
+            <div class="div-container flex flex-col gap-5 max-w-[800px]">
+                {images?.slice(0, callActionImagesIndex.value).map((image, index) => (
+                    <Picture preload={true} key={index}>
+                        <Source
+                            media="(max-width: 767px)"
+                            fetchPriority={"high"}
+                            src={image.srcMobile}
+                            width={430}
+                            height={590}
+                        />
+                        <Source
+                            media="(min-width: 768px)"
+                            fetchPriority={"high"}
+                            src={image.srcDesktop}
+                            width={1440}
+                            height={600}
+                        />
+                        <img
+                            class="object-cover w-full h-full"
+                            loading={"lazy"}
+                            src={image.srcDesktop}
+                            alt={image.textSeo}
+                        />
+                    </Picture>
+                ))}
+            </div>
+            {images?.length != callActionImagesIndex.value && <button class="btn btn-outline" onClick={() => {loadMoreImage()}}>Ver mais imagens +</button>}
+            
+        </div>
+    );
+>>>>>>> 24e30d0fea03a7228973aa69080158e0bed55d4a:components/feats/ExpandImageGallery.tsx
 }
 
 export default PartialImageGallery;
