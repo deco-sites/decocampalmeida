@@ -26,7 +26,7 @@ function PartialImageGallery({
     };
 
     return (
-        <div class="w-full container py-8 flex flex-col gap-6 lg:py-10">
+        <div class="w-full container py-8 flex flex-col gap-6 lg:py-10 items-center">
             <div class="div-container flex flex-col gap-5 max-w-[800px]">
                 {images?.slice(0, callActionImagesIndex.value).map((image, index) => (
                     <Picture preload={true} key={index}>
@@ -53,7 +53,8 @@ function PartialImageGallery({
                     </Picture>
                 ))}
             </div>
-            <button onClick={() => {loadMoreImage()}}>Carregar mais imagen2s</button>
+            {images?.length != callActionImagesIndex.value && <button class="btn btn-outline" onClick={() => {loadMoreImage()}}>Ver mais imagens +</button>}
+            
         </div>
     );
 }
