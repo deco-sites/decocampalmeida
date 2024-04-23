@@ -3,12 +3,12 @@ import { AvailableIcons } from "../static/adminIcons.ts";
 
 export type Res = {
   product: number;
-  total:number;
+  total: number;
 };
 
 export interface Props {
   productId: string;
-  total:number;
+  total: number;
 }
 
 const icons = Object.keys(AvailableIcons).map((iconName) => ({

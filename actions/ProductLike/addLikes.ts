@@ -8,7 +8,7 @@ export type Res = {
 
 const action = async (
   props: Props,
-  _req: Request
+  _req: Request,
 ): Promise<Res | null> => {
   const { productId } = props;
   const controller = new AbortController();
@@ -21,8 +21,8 @@ const action = async (
       headers: {
         "x-api-key": "decocampalmeida",
       },
-      mode: 'no-cors',
-      body: JSON.stringify({ "productId": productId })
+      mode: "no-cors",
+      body: JSON.stringify({ "productId": productId }),
     });
     const response = await res.json();
     return response;

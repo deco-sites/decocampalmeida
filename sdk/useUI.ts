@@ -22,7 +22,7 @@ const state = {
   callAction,
   callActionImagesIndex,
   likesCountGlobal,
-  productsVoted
+  productsVoted,
 };
 
 // Keyboard event listeners

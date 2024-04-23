@@ -1,11 +1,11 @@
 export interface Props {
   productId: string;
-  total:number;
+  total: number;
 }
 
 export type Res = {
   product: number;
-  total:number;
+  total: number;
 };
 
 const loader = async (props: Props): Promise<Res | null> => {

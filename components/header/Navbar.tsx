@@ -72,15 +72,17 @@ function Navbar(
   return (
     <div class="hidden sm:grid sm:grid-cols-3 items-center border-b border-base-200 w-full px-6">
       <ul
-        class={`flex gap-6 col-span-1 items-center ${logoPosition === "left" ? "justify-center" : "justify-start"
-          }`}
+        class={`flex gap-6 col-span-1 items-center ${
+          logoPosition === "left" ? "justify-center" : "justify-start"
+        }`}
       >
         <GlobalLikeIcon />
         {items.map((item) => <NavItem item={item} />)}
       </ul>
       <div
-        class={`flex ${logoPosition === "left" ? "justify-start -order-1" : "justify-center"
-          }`}
+        class={`flex ${
+          logoPosition === "left" ? "justify-start -order-1" : "justify-center"
+        }`}
       >
         {logo && (
           <a

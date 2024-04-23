@@ -8,7 +8,7 @@ const loader = async (): Promise<ResGlobal | null> => {
 
   try {
     const res = await fetch(`https://camp-api.deco.cx/events`, {
-      mode: 'no-cors',
+      mode: "no-cors",
       signal,
       headers: {
         "x-api-key": "decocampalmeida",
@@ -16,20 +16,19 @@ const loader = async (): Promise<ResGlobal | null> => {
     });
 
     if (!res.ok) {
-      console.log('Error:', res.statusText);
+      console.log("Error:", res.statusText);
       return null;
     }
 
-    const contentType = res.headers.get('content-type');
-    if (contentType && contentType.includes('application/json')) {
+    const contentType = res.headers.get("content-type");
+    if (contentType && contentType.includes("application/json")) {
       const response = await res.json();
       return response;
     } else {
       return null;
     }
-
   } catch (err) {
-    console.log('Error:', err);
+    console.log("Error:", err);
     return null;
   }
 };

@@ -5,13 +5,12 @@
 import * as $$$$$$$$$0 from "./actions/ProductLike/addLikes.ts";
 import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
-import * as $$$5 from "./loaders/availableIcons.ts";
-import * as $$$6 from "./loaders/icons.ts";
+import * as $$$4 from "./loaders/availableIcons.ts";
+import * as $$$5 from "./loaders/icons.ts";
 import * as $$$0 from "./loaders/Layouts/ProductCard.tsx";
 import * as $$$1 from "./loaders/List/Sections.tsx";
-import * as $$$2 from "./loaders/ProductLike/addLikes.ts";
-import * as $$$3 from "./loaders/ProductLike/getGlobalLikes.ts";
-import * as $$$4 from "./loaders/ProductLike/getProductLikes.ts";
+import * as $$$2 from "./loaders/ProductLike/getGlobalLikes.ts";
+import * as $$$3 from "./loaders/ProductLike/getProductLikes.ts";
 import * as $$$$$$0 from "./sections/Animation/Animation.tsx";
 import * as $$$$$$1 from "./sections/Cards/IconCardsCarousel.tsx";
 import * as $$$$$$2 from "./sections/Cards/IconCardsCarouselWithImage.tsx";
@@ -66,13 +65,12 @@ import * as $$$$$$50 from "./sections/Weather.tsx";
 
 const manifest = {
   "loaders": {
-    "deco-sites/decocampalmeida/loaders/availableIcons.ts": $$$5,
-    "deco-sites/decocampalmeida/loaders/icons.ts": $$$6,
+    "deco-sites/decocampalmeida/loaders/availableIcons.ts": $$$4,
+    "deco-sites/decocampalmeida/loaders/icons.ts": $$$5,
     "deco-sites/decocampalmeida/loaders/Layouts/ProductCard.tsx": $$$0,
     "deco-sites/decocampalmeida/loaders/List/Sections.tsx": $$$1,
-    "deco-sites/decocampalmeida/loaders/ProductLike/addLikes.ts": $$$2,
-    "deco-sites/decocampalmeida/loaders/ProductLike/getGlobalLikes.ts": $$$3,
-    "deco-sites/decocampalmeida/loaders/ProductLike/getProductLikes.ts": $$$4,
+    "deco-sites/decocampalmeida/loaders/ProductLike/getGlobalLikes.ts": $$$2,
+    "deco-sites/decocampalmeida/loaders/ProductLike/getProductLikes.ts": $$$3,
   },
   "sections": {
     "deco-sites/decocampalmeida/sections/Animation/Animation.tsx": $$$$$$0,
