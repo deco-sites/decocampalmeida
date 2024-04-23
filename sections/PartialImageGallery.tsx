@@ -1,1 +1,1 @@
-export { default } from "../islands/PartialImageGallery.tsx";
+export { default } from "../islands/ExpandImageGallery.tsx";

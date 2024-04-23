@@ -11,6 +11,8 @@ const displaySearchPopup = signal(false);
 const displaySearchDrawer = signal(false);
 const callAction = signal(false);
 const callActionImagesIndex = signal(3);
+const likesCountGlobal = signal(0);
+const productsVoted = signal<string[]>([]);
 
 const state = {
   displayCart,
@@ -19,6 +21,8 @@ const state = {
   displaySearchDrawer,
   callAction,
   callActionImagesIndex,
+  likesCountGlobal,
+  productsVoted
 };
 
 // Keyboard event listeners

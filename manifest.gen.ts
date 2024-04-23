@@ -2,12 +2,16 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
+import * as $$$$$$$$$0 from "./actions/ProductLike/addLikes.ts";
 import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
-import * as $$$2 from "./loaders/availableIcons.ts";
-import * as $$$3 from "./loaders/icons.ts";
+import * as $$$5 from "./loaders/availableIcons.ts";
+import * as $$$6 from "./loaders/icons.ts";
 import * as $$$0 from "./loaders/Layouts/ProductCard.tsx";
 import * as $$$1 from "./loaders/List/Sections.tsx";
+import * as $$$2 from "./loaders/ProductLike/addLikes.ts";
+import * as $$$3 from "./loaders/ProductLike/getGlobalLikes.ts";
+import * as $$$4 from "./loaders/ProductLike/getProductLikes.ts";
 import * as $$$$$$0 from "./sections/Animation/Animation.tsx";
 import * as $$$$$$1 from "./sections/Cards/IconCardsCarousel.tsx";
 import * as $$$$$$2 from "./sections/Cards/IconCardsCarouselWithImage.tsx";
@@ -45,26 +49,30 @@ import * as $$$$$$33 from "./sections/Miscellaneous/CampaignTimer.tsx";
 import * as $$$$$$34 from "./sections/Miscellaneous/CookieConsent.tsx";
 import * as $$$$$$35 from "./sections/Miscellaneous/Slide.tsx";
 import * as $$$$$$36 from "./sections/Newsletter/Newsletter.tsx";
-import * as $$$$$$37 from "./sections/Product/ImageGalleryFrontBack.tsx";
-import * as $$$$$$38 from "./sections/Product/NotFound.tsx";
-import * as $$$$$$39 from "./sections/Product/NotFoundChallenge.tsx";
-import * as $$$$$$40 from "./sections/Product/ProductDetails.tsx";
-import * as $$$$$$41 from "./sections/Product/ProductShelf.tsx";
-import * as $$$$$$42 from "./sections/Product/ProductShelfTabbed.tsx";
-import * as $$$$$$43 from "./sections/Product/SearchResult.tsx";
-import * as $$$$$$44 from "./sections/Product/ShelfWithImage.tsx";
-import * as $$$$$$45 from "./sections/Product/Wishlist.tsx";
-import * as $$$$$$46 from "./sections/Social/InstagramPosts.tsx";
-import * as $$$$$$47 from "./sections/Social/WhatsApp.tsx";
-import * as $$$$$$48 from "./sections/Theme/Theme.tsx";
-import * as $$$$$$49 from "./sections/Weather.tsx";
+import * as $$$$$$37 from "./sections/PartialImageGallery.tsx";
+import * as $$$$$$38 from "./sections/Product/ImageGalleryFrontBack.tsx";
+import * as $$$$$$39 from "./sections/Product/NotFound.tsx";
+import * as $$$$$$40 from "./sections/Product/NotFoundChallenge.tsx";
+import * as $$$$$$41 from "./sections/Product/ProductDetails.tsx";
+import * as $$$$$$42 from "./sections/Product/ProductShelf.tsx";
+import * as $$$$$$43 from "./sections/Product/ProductShelfTabbed.tsx";
+import * as $$$$$$44 from "./sections/Product/SearchResult.tsx";
+import * as $$$$$$45 from "./sections/Product/ShelfWithImage.tsx";
+import * as $$$$$$46 from "./sections/Product/Wishlist.tsx";
+import * as $$$$$$47 from "./sections/Social/InstagramPosts.tsx";
+import * as $$$$$$48 from "./sections/Social/WhatsApp.tsx";
+import * as $$$$$$49 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$50 from "./sections/Weather.tsx";
 
 const manifest = {
   "loaders": {
-    "deco-sites/decocampalmeida/loaders/availableIcons.ts": $$$2,
-    "deco-sites/decocampalmeida/loaders/icons.ts": $$$3,
+    "deco-sites/decocampalmeida/loaders/availableIcons.ts": $$$5,
+    "deco-sites/decocampalmeida/loaders/icons.ts": $$$6,
     "deco-sites/decocampalmeida/loaders/Layouts/ProductCard.tsx": $$$0,
     "deco-sites/decocampalmeida/loaders/List/Sections.tsx": $$$1,
+    "deco-sites/decocampalmeida/loaders/ProductLike/addLikes.ts": $$$2,
+    "deco-sites/decocampalmeida/loaders/ProductLike/getGlobalLikes.ts": $$$3,
+    "deco-sites/decocampalmeida/loaders/ProductLike/getProductLikes.ts": $$$4,
   },
   "sections": {
     "deco-sites/decocampalmeida/sections/Animation/Animation.tsx": $$$$$$0,
@@ -108,22 +116,26 @@ const manifest = {
       $$$$$$34,
     "deco-sites/decocampalmeida/sections/Miscellaneous/Slide.tsx": $$$$$$35,
     "deco-sites/decocampalmeida/sections/Newsletter/Newsletter.tsx": $$$$$$36,
+    "deco-sites/decocampalmeida/sections/PartialImageGallery.tsx": $$$$$$37,
     "deco-sites/decocampalmeida/sections/Product/ImageGalleryFrontBack.tsx":
-      $$$$$$37,
-    "deco-sites/decocampalmeida/sections/Product/NotFound.tsx": $$$$$$38,
+      $$$$$$38,
+    "deco-sites/decocampalmeida/sections/Product/NotFound.tsx": $$$$$$39,
     "deco-sites/decocampalmeida/sections/Product/NotFoundChallenge.tsx":
-      $$$$$$39,
-    "deco-sites/decocampalmeida/sections/Product/ProductDetails.tsx": $$$$$$40,
-    "deco-sites/decocampalmeida/sections/Product/ProductShelf.tsx": $$$$$$41,
+      $$$$$$40,
+    "deco-sites/decocampalmeida/sections/Product/ProductDetails.tsx": $$$$$$41,
+    "deco-sites/decocampalmeida/sections/Product/ProductShelf.tsx": $$$$$$42,
     "deco-sites/decocampalmeida/sections/Product/ProductShelfTabbed.tsx":
-      $$$$$$42,
-    "deco-sites/decocampalmeida/sections/Product/SearchResult.tsx": $$$$$$43,
-    "deco-sites/decocampalmeida/sections/Product/ShelfWithImage.tsx": $$$$$$44,
-    "deco-sites/decocampalmeida/sections/Product/Wishlist.tsx": $$$$$$45,
-    "deco-sites/decocampalmeida/sections/Social/InstagramPosts.tsx": $$$$$$46,
-    "deco-sites/decocampalmeida/sections/Social/WhatsApp.tsx": $$$$$$47,
-    "deco-sites/decocampalmeida/sections/Theme/Theme.tsx": $$$$$$48,
-    "deco-sites/decocampalmeida/sections/Weather.tsx": $$$$$$49,
+      $$$$$$43,
+    "deco-sites/decocampalmeida/sections/Product/SearchResult.tsx": $$$$$$44,
+    "deco-sites/decocampalmeida/sections/Product/ShelfWithImage.tsx": $$$$$$45,
+    "deco-sites/decocampalmeida/sections/Product/Wishlist.tsx": $$$$$$46,
+    "deco-sites/decocampalmeida/sections/Social/InstagramPosts.tsx": $$$$$$47,
+    "deco-sites/decocampalmeida/sections/Social/WhatsApp.tsx": $$$$$$48,
+    "deco-sites/decocampalmeida/sections/Theme/Theme.tsx": $$$$$$49,
+    "deco-sites/decocampalmeida/sections/Weather.tsx": $$$$$$50,
+  },
+  "actions": {
+    "deco-sites/decocampalmeida/actions/ProductLike/addLikes.ts": $$$$$$$$$0,
   },
   "apps": {
     "deco-sites/decocampalmeida/apps/decohub.ts": $$$$$$$$$$$0,

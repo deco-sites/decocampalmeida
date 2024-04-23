@@ -1,6 +1,16 @@
 import { allowCorsFor, FnContext } from "deco/mod.ts";
 import { AvailableIcons } from "../static/adminIcons.ts";
 
+export type Res = {
+  product: number;
+  total:number;
+};
+
+export interface Props {
+  productId: string;
+  total:number;
+}
+
 const icons = Object.keys(AvailableIcons).map((iconName) => ({
   component: AvailableIcons[iconName as keyof typeof AvailableIcons],
   label: iconName,
