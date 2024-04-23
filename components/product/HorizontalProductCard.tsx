@@ -117,7 +117,7 @@ function HorizontalProductCard({
   return (
     <div
       id={id}
-      class={`card card-side bg-base-100 shadow-xl justify-between w-full lg:w-[50%] ${
+      class={`card card-side bg-base-100 border-4 max-h-[330px] md:p-[10px] justify-between w-full ${
         align === "center" ? "text-center" : "text-start"
       } ${l?.onMouseOver?.showCardShadow ? "lg:hover:card-bordered" : ""}
         ${
@@ -183,7 +183,7 @@ function HorizontalProductCard({
       <a
         href={url && relative(url)}
         aria-label="view product"
-        class="grid grid-cols-1 grid-rows-1 max-w-xs min-w-[30%]"
+        class="grid grid-cols-1 grid-rows-1 max-w-xs min-w-[30%] overflow-hidden"
       >
         <Image
           src={front.url!}

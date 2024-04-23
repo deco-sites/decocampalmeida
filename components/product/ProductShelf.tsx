@@ -62,7 +62,7 @@ function ProductShelf({
   };
 
   return (
-    <div class="w-full container py-8 flex flex-col gap-6 lg:py-10">
+    <div class="w-full container py-8 flex flex-col gap-6 lg:py-10 items-center">
       <Header
         title={title || ""}
         description={description || ""}
@@ -72,13 +72,21 @@ function ProductShelf({
 
       {layout?.horizontal
         ? (
+
           <div
             id={id}
-            class={`flex flex-row justify-center items-center gap-14 flex-wrap`}
+            class={clx(
+              "grid",
+              layout?.showArrows && "grid-cols-[48px_1fr_48px] md:max-w-[1000px]",
+              "px-0 md:px-5",
+            )}
           >
-            {products?.map((product, index) => (
-              product
-                ? (
+            <Slider class="carousel carousel-center sm:carousel-end sm:gap-1 row-start-2 row-end-5">
+              {products?.map((product, index) => (
+                <Slider.Item
+                  index={index}
+                  class={"carousel-item w-full"}
+                >
                   <HorizontalProductCard
                     product={product}
                     itemListName={title}
@@ -86,23 +94,46 @@ function ProductShelf({
                     platform={"vtex"}
                     index={index}
                   />
-                )
-                : (
-                  <>
-                    <Image
-                      src={"front.url!"}
-                      alt={"front.alternateName"}
-                      width={500}
-                      height={500}
-                      class={`bg-base-100 col-span-full row-span-full rounded w-full`}
-                      sizes="(max-width: 640px) 50vw, 20vw"
-                      preload={true}
-                      loading="eager"
-                      decoding="async"
+                </Slider.Item>
+              ))}
+            </Slider>
+
+            {layout?.showArrows && (
+              <>
+                <div class="relative block z-10 col-start-1 row-start-3">
+                  <Slider.PrevButton class="absolute w-12 h-12 flex justify-center items-center">
+                    <Icon
+                      size={24}
+                      id="ChevronLeft"
+                      strokeWidth={3}
+                      class="w-5"
                     />
-                  </>
-                )
-            ))}
+                  </Slider.PrevButton>
+                </div>
+                <div class="relative block z-10 col-start-3 row-start-3">
+                  <Slider.NextButton class="absolute w-12 h-12 flex justify-center items-center">
+                    <Icon size={24} id="ChevronRight" strokeWidth={3} />
+                  </Slider.NextButton>
+                </div>
+              </>
+            )}
+            <SliderJS rootId={id} />
+            <SendEventOnView
+              id={id}
+              event={{
+                name: "view_item_list",
+                params: {
+                  item_list_name: title,
+                  items: products.map((product, index) =>
+                    mapProductToAnalyticsItem({
+                      index,
+                      product,
+                      ...(useOffer(product.offers)),
+                    })
+                  ),
+                },
+              }}
+            />
           </div>
         )
         : (
